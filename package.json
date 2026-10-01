@@ -33,6 +33,7 @@
     "lib",
     "cordis.patch.yml",
     "README.md",
+    "README.ru.md",
     "LICENSE",
     "icon.svg"
   ],
