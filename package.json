@@ -1,0 +1,49 @@
+{
+  "name": "dsh-discord-presence",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Discord Rich Presence for DeepSeek Harness: which project is being worked on, how long the session has been running, and how many tokens it has eaten. Zero dependencies.",
+  "license": "MIT",
+  "author": "nightfun-pixel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightfun-pixel/dsh-discord-presence.git"
+  },
+  "homepage": "https://github.com/nightfun-pixel/dsh-discord-presence#readme",
+  "bugs": {
+    "url": "https://github.com/nightfun-pixel/dsh-discord-presence/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "discord",
+    "rich-presence"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Discord Rich Presence",
+    "description": "Puts a live card in Discord: the project, the elapsed timer, the model, and the tokens the harness has spent."
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

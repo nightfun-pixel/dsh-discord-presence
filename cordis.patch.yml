@@ -1,0 +1,27 @@
+# Discord Rich Presence for the harness.
+#
+# The insert registers the row. Everything under `config` is the composition layer
+# that Settings > Plugins edits: a save from that page writes an override into the
+# profile's own cordis.patch.yml, which is applied after every bundle layer, and
+# "Reset to default" clears it back to these values.
+#
+# To make the card appear, paste a Discord Application ID into `clientId` — either
+# here or in Settings > Plugins. One minute at
+# https://discord.com/developers/applications: New Application, then copy the
+# Application ID from General Information. The application's NAME is what Discord
+# shows on the card, so call it "DeepSeek Harness".
+#
+# With `clientId` empty the plugin still runs: it keeps the status file fresh and
+# logs the reason on stderr instead of connecting.
+- insert:
+    - id: discord-presence
+      name: 'dsh-discord-presence'
+      config:
+        enabled: true
+        clientId: ''
+        language: en
+        showModel: true
+        showTokens: true
+        showTurns: true
+        showTools: true
+        statusFile: true
